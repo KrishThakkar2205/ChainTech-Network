@@ -162,50 +162,6 @@
     document.getElementById('task-form').action = '/addtask'
   </script>
 
-  <!-- <script>
-    // JavaScript logic for adding, editing, and completing tasks
-    const taskForm = document.getElementById('task-form');
-    const taskList = document.getElementById('taskList');
-    const completedTaskList = document.getElementById('completedTaskList');
-
-    taskForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      
-      const title = document.getElementById('taskTitle').value;
-      const description = document.getElementById('taskDescription').value;
-
-      if (title && description) {
-        const taskItem = document.createElement('li');
-        taskItem.className = 'list-group-item d-flex justify-content-between align-items-center';
-
-        taskItem.innerHTML = `
-          <div>
-            <h6>${title}</h6>
-            <p class="mb-0 text-muted">${description}</p>
-          </div>
-          <div>
-            <button class="btn btn-primary btn-sm me-2 edit-task">Edit</button>
-            <button class="btn btn-success btn-sm complete-task">Complete</button>
-          </div>
-        `;
-
-        taskList.appendChild(taskItem);
-        taskForm.reset();
-
-        // Handle edit and complete buttons
-        taskItem.querySelector('.edit-task').addEventListener('click', () => {
-          document.getElementById('taskTitle').value = title;
-          document.getElementById('taskDescription').value = description;
-          taskList.removeChild(taskItem);
-        });
-
-        taskItem.querySelector('.complete-task').addEventListener('click', () => {
-          completedTaskList.appendChild(taskItem);
-          taskItem.querySelector('.complete-task').remove();
-          taskItem.querySelector('.edit-task').remove();
-        });
-      }
-    });
-  </script> -->
+  
 </body>
 </html>
