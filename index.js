@@ -55,7 +55,7 @@ app.post('/addtask',async (req,res)=>{
     // console.log(id)
     if(id){
         // console.log(id)
-        await tasks.updateOne({'uniqueId':id},{$set:{title:title, discription:description}})
+        await tasks.updateOne({'uniqueId':id},{$set:{title:title, discription:description,category:category}})
     } else {
         const uniqueId = uuidv4()
         let task = new tasks({
