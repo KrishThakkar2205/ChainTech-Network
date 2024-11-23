@@ -88,7 +88,7 @@
               </div>
               <div>
                 <button class="btn btn-danger btn-sm me-2 edit-task"><a href="/deletetask?uid=<%= tasklist[i].uniqueId%>">Delete</a></button>
-                <button class="btn btn-primary btn-sm me-2 edit-task" onclick="handledit('<%= tasklist[i].uniqueId%>','<%= tasklist[i].title%>','<%= tasklist[i].discription%>')">Edit</button>
+                <button class="btn btn-primary btn-sm me-2 edit-task" onclick="handledit('<%= tasklist[i].uniqueId%>','<%= tasklist[i].title%>','<%= tasklist[i].discription%>','<%= tasklist[i].category%>)">Edit</button>
                 <button class="btn btn-success btn-sm complete-task"><a href="/completedtask?uid=<%= tasklist[i].uniqueId%>">Complete</a></button>
               </div>
             </li>
@@ -151,7 +151,7 @@
   <script>
     
     let num = null
-    function handledit(id,title,description){
+    function handledit(id,title,description,cat){
       document.getElementById('taskTitle').value = title
       document.getElementById('taskDescription').value = description
       num = id
